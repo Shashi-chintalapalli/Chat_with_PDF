@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chat with PDF</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <h1>📄 Chat with your PDF</h1>
+
+    <form method="POST" enctype="multipart/form-data">
+        <label for="pdf">📎 Upload your PDF:</label>
+        <input type="file" id="pdf" name="pdf" accept=".pdf" required>
+
+        <label for="query">📝 Ask something:</label>
+        <input type="text" id="query" name="query" placeholder="Type your question here..." required>
+
+        <button type="submit">Ask</button>
+    </form>
+
+    {% if answer %}
+    <div class="answer">
+        <h2>💬 Answer:</h2>
+        <p>{{ answer }}</p>
+    </div>
+    {% endif %}
+
+    {% if pdf_text %}
+    <div style="text-align:center; margin-top: 20px;">
+        <button onclick="document.getElementById('preview').style.display='block'">📄 Show PDF Preview</button>
+    </div>
+    <div id="preview" style="display:none;">
+        <pre>{{ pdf_text }}</pre>
+    </div>
+    {% endif %}
+
+    <footer>
+        Made with ❤️ by <strong>Shashi Kumar Reddy</strong> • 📧 shashi.chintalapalli@gmail.com
+    </footer>
+</body>
+</html>
