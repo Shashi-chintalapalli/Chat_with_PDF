@@ -1,9 +1,8 @@
 Flask
-gunicorn
-transformers
-torch==2.2.2
 PyPDF2
 python-dotenv
+transformers
+torch==2.7.1
 langchain
 langchain-community
 sentence-transformers
