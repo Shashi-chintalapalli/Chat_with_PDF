@@ -5,3 +5,4 @@ transformers
 torch
 langchain
 langchain-community
+sentence-transformers
