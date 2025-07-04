@@ -6,3 +6,5 @@ torch==2.7.1
 langchain
 langchain-community
 sentence-transformers
+gunicorn
+
